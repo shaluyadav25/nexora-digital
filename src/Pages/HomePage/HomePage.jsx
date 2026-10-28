@@ -80,6 +80,10 @@ export default function HomePage() {
 
       <div className="nx-site">
         <section className="nx-hero">
+          <video className="nx-hero-background" autoPlay muted loop playsInline preload="metadata" poster="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=90" aria-label="Premium technology and software development team video">
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+          <div className="nx-hero-overlay" aria-hidden="true" />
           <div className="nx-hero-grid">
             <motion.div className="nx-hero-copy" initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .65 }}>
               <p className="nx-hero-kicker"><span className="nx-live-dot" /> SOFTWARE · DESIGN · DIGITAL PRODUCTS</p>
@@ -92,15 +96,7 @@ export default function HomePage() {
               <div className="nx-hero-foot"><span><Check size={15} /> Thoughtful from day one</span><i /> <span>From first idea to launch</span></div>
             </motion.div>
 
-            <motion.div className="nx-hero-visual" initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8, delay: .12 }}>
-              <div className="nx-hero-image-frame">
-                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1500&q=90" alt="A software team collaborating around a table in a bright modern workspace" fetchPriority="high" />
-                <div className="nx-image-shade" />
-                <div className="nx-photo-caption"><span>GOOD WORK, BUILT TOGETHER</span><ArrowUpRight size={17} /></div>
-              </div>
-              <div className="nx-floating-note"><span className="nx-note-icon"><Workflow size={19} /></span><span><strong>One connected team</strong><small>Strategy · Design · Engineering</small></span></div>
-              <div className="nx-hero-stamp"><span>IDEAS INTO</span><strong>IMPACT<span>.</span></strong><ArrowDownRight size={23} /></div>
-            </motion.div>
+            <motion.div className="nx-hero-visual" aria-hidden="true" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .8, delay: .12 }} />
           </div>
           <div className="nx-hero-bottomline"><span>INDEPENDENT DIGITAL STUDIO</span><span>BASED IN LUCKNOW · WORKING EVERYWHERE</span><span>SCROLL TO EXPLORE ↓</span></div>
         </section>
